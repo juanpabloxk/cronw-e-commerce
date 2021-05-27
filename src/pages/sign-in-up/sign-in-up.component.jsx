@@ -10,6 +10,6 @@ const SignInUpPage = () => (
     <SignIn />
     <SignUp />
   </div>
-)
+);
 
 export default SignInUpPage;
