@@ -1,4 +1,5 @@
-const sections = [
+const INITIAL_STATE = {
+  sections: [
   {
     title: 'hats',
     imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
@@ -31,6 +32,5 @@ const sections = [
     id: 5,
     linkUrl: 'shop/mens'
   }
-];
-
-export default sections;
+]
+}
