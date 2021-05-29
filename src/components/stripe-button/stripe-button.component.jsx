@@ -21,8 +21,8 @@ const StripeChecloutButton = ({price}) => {
       description={`Your total is $${price}`}
       amount={priceForStripe}
       panelLabel='Pay now'
-      onToken={onToken}
-      token={publishableKey}
+      token={onToken}
+      stripeKey={publishableKey}
     />
   )
 };
