@@ -1,9 +1,16 @@
 .user-icon-container {
-  height: 60%;  
+  height: 70%;
+  animation-name: fade-in;
+	animation-fill-mode: both;
+	animation-duration: 3s;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .user-icon-image {
   max-height: 100%;
-  max-width: 100;
   border-radius: 50%;
 }
