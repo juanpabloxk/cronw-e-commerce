@@ -12,26 +12,22 @@ import CartDropDown from '../cart-dropdown/cart-dropdown.component'
 
 import './header.styles.scss';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
+import UserIcon from '../user-icon/user-icon.component';
+import UserDrowpDown from '../user-dropdown/user-dropdown.component';
 
-const Header = ({currentUser, hidden}) => (
+const Header = ({ currentUser, hidden }) => (
   <div className='header'>
     <Link className='logo-container' to='/'>
       <Logo className='logo' />
     </Link>
+
     <div className='options'>
       <Link className='option' to='/shop' >STOP</Link>
-      <Link className='option' to='/shop' >CONTACT</Link>
-      {
-        currentUser ?
-        <div className='option' onClick={() => auth.signOut()}>SIGN OUT</div>
-        : <Link className="option" to='sign-in'>SIGN IN</Link>
-      }
       <CartIcon />
+      { currentUser ? <UserIcon user={currentUser} /> : <Link className="option" to='sign-in'>SIGN IN</Link> }
     </div>
-    {
-      hidden ? null :
-      <CartDropDown />
-    }
+    { hidden ? null : <CartDropDown /> }
+    { currentUser ? <UserDrowpDown user={currentUser}/> : null }
   </div>
 )
 
