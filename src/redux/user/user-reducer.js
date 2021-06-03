@@ -15,6 +15,14 @@ const userReducer = (state = INITIAL_STATE, action) => {
         error: null,
         userDropdownHidden: action.payload ? state.userDropdownHidden : true
       }
+    case UserActionTypes.SIGN_OUT_SUCCESS:
+      return {
+        ...state,
+        currentUser: null,
+        error: null,
+        userDropdownHidden: true
+      }
+    case UserActionTypes.SIGN_OUT_FAILURE:
     case UserActionTypes.SIGN_IN_FAILURE:
       return {
         ...state,

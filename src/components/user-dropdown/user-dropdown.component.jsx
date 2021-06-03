@@ -1,20 +1,25 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-import { auth } from '../../firebase/firebase.utils'
+import { signOutStart } from '../../redux/user/user.actions';
 import CustomButton from '../custom-button/custom-button.component';
 
 import './user-dropdown.styles.scss';
 
-const UserDrowpDown = ({user: {displayName, email}}) => (
+const UserDrowpDown = ({user: {displayName, email}, signOutStart}) => (
   <div className="user-dropdown">
     <b>{displayName}</b>
     <i>{email}</i>
     <CustomButton
       type='button'
-      onClick={() => auth.signOut()}>
+      onClick={signOutStart}>
       SIGN OUT
     </CustomButton>
   </div>
 );
 
-export default UserDrowpDown;
+const mapDispatchToProps = dispatch => ({
+  signOutStart: () => dispatch(signOutStart())
+})
+
+export default connect(null, mapDispatchToProps)(UserDrowpDown);

@@ -19,7 +19,7 @@ import {
   OptionLink}
 from './header.styles'
 
-const Header = ({ currentUser, cartDropDownHidden, userDropdownHidden }) => (
+const Header = ({ currentUser,cartDropDownHidden, userDropdownHidden }) => (
   <HeaderContainer>
     <LogoContainer to='/'>
       <Logo className='logo' />
@@ -44,4 +44,8 @@ const mapStateToProps = createStructuredSelector({
   userDropdownHidden: selectUserDropdownHidden
 })
 
-export default connect(mapStateToProps)(Header);
+const mapDispatchToProps = dispatch => ({
+  
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
