@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid black;
-  margin: 0 7.5px 15px;
+  margin: 10px 10px;
   overflow: hidden;
 
   &:hover {
@@ -64,6 +64,10 @@
     .subtitle {
       font-weight: lighter;
       font-size: 16px;
+    }
+
+    @media screen and (max-width: 800px) {
+      height: 200px;
     }
   }
 }

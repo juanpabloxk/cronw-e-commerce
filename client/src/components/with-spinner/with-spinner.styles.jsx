@@ -18,6 +18,12 @@ export const SpinnerContainer = styled.div`
   border-bottom-color: gray;
   animation: spin 0.7s ease-in-out infinite;
   -webkit-animation: spin 0.7s ease-in-out infinite;
+
+  @media screen and (max-width: 800px) {
+    height: 100px;
+    width: 100px;
+  }
+
   @keyframes spin {
     to {
       -webkit-transform: rotate(360deg);

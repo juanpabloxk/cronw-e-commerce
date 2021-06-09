@@ -6,4 +6,10 @@
   .title {
     margin: 10px 0;
   }
+
+  @media screen and (max-width: 800px) {
+    button {
+      width: 100%;
+    }
+  }
 }
