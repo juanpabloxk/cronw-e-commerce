@@ -9,7 +9,7 @@
     grid-template-columns: 1fr 1fr;
   }
   
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 350px) {
     grid-template-columns: 1fr;
   }
 }
