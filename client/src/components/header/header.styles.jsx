@@ -7,28 +7,22 @@ const OptionContainerStyles = css`
 `
 
 export const HeaderContainer = styled.div`
-  height: 70px;
+  height: 80px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
 
   @media screen and (max-width: 800px) {
-    height: 60px;
+    height: 120px;
     padding: 10px;
     margin-bottom: 20px;
   }
 `;
 
 export const LogoContainer = styled(Link)`
-  height: 100%;
-  width: 70px;
-  padding: 25px;
-
-  @media screen and (max-width: 800px) {
-    width: 80px;
-    padding: 0;
-  }
+  display: flex;
+  align-items: center;
 `;
 
 export const OptionsContainer = styled.div`

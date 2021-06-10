@@ -32,9 +32,9 @@ const Header = ({ currentUser,cartDropDownHidden, userDropdownHidden }) => (
         <UserIcon user={currentUser} /> 
         : <OptionLink to='sign-in'>SIGN IN</OptionLink>
       }
+      { !cartDropDownHidden ? <CartDropDown/> : null }
+      { !userDropdownHidden ? <UserDrowpDown user={currentUser}/> : null }
     </OptionsContainer>
-    { !cartDropDownHidden ? <CartDropDown/> : null }
-    { !userDropdownHidden ? <UserDrowpDown user={currentUser}/> : null }
   </HeaderContainer>
 )
 
